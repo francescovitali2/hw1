@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius:  5px;
+    height: fit-content;
+}
+
+#container h1 {
+    font-size: 2.5rem;
+}
+
+form {
+    width: 70%;
+    margin-bottom: 0;
+}
+
+form label {
+    display: block;
+    font-size: 1.7em;
+}
+
+input {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    padding: 2%;
+    margin: 4px 0;
+    border: 1px solid #333;
+}
+
+form span {
+    opacity: 0;
+    display: block;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    margin-left: 2px;
+    color: red;
+}
+
+.error {
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+.short {
+    display: inline-block;
+    width: calc(100% - 48px);
+}
+
+#show {
+    display: inline-block;
+    height: 29px;
+    width: 29px;
+    border: 1px solid  #333;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    cursor: pointer;
+    padding: 7px;
+}
+
+input[type='submit'] {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.171);
+    opacity: 0.5;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    width: 30%;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    font-size: 1.7em;
+    margin-top: 0;
+}
+
+input.active {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.php_error {
+    font-size: 1.3em;
+    color: red;
+    width: 80%;
+    margin-bottom: 20px;
+    margin-left: 2px;
+}
+
+#login {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+}
+
+#signup{
+    font-size: 1.3em;
+    margin-bottom: 25px;
+}
+ 
+@media (max-width:912px) {
+    
+    #container {
+        width: 75%;
+    }
+    
+    #container h1 {
+        font-size: 25px;
+    }
+    
+    form {
+        width: 68%;
+    }
+    
+    form label {
+        font-size: 14px;
+    }
+    
+    input {
+        height: 34px;
+        font-size: 14px;
+        margin: 2px 0;
+        padding-left: 10px;
+    }
+    
+    form span {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .short {
+        display: inline-block;
+        width: calc(100% - 38px);
+    }
+    
+    #show {
+        height: 19px;
+        width: 19px;
+    }
+    
+    input[type='submit'] {
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    
+    .php_error {
+        font-size: 12px;
+        width: 70%;
+        margin-top: 5px;
+    }
+    
+    #login {
+        font-size: 12px;
+    }
+}

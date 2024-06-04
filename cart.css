@@ -1,0 +1,445 @@
+html, body{
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.header_cont {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  height: 81px;
+}
+
+.menu {
+  margin-left: 20px;
+  position: relative;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+#user {
+  display: inline-block;
+  position: absolute;
+}
+
+#popup {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 150px;
+  height: 100px;
+  background-color: white;
+  color: #333;
+  z-index: 1000;
+  padding: 10px 15px 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2.5px #333333c5;
+}
+
+#cart {
+  position: relative;
+}
+
+#number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: red;
+  font-size: 10px;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 33%;
+  left: 90.5%;
+}
+
+#popup a {
+  border-top: 1px solid #3333333e;
+  color: #333;
+  width: 100%;
+  padding-top: 15px;
+}
+
+.header {
+  flex-grow: 1;
+  text-align: right;
+  margin-right: 20px;
+}
+
+#hamburger{
+  display: none;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-end;
+  margin-right: 6%;
+}
+
+#hamburger div{
+  width:25px;
+  height: 2px;
+  background-color: aliceblue;
+  margin:2.5px;
+  border-radius: 2px;
+}
+
+.prodotti_cat {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.prodotto-prezzo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+
+.prezzo-eur,
+.prezzo-usd {
+  color: #333333e2;
+  font-weight: bold;
+}
+
+ul#listaProdotti{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+#listaProdotti {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#listaProdotti li {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 18px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 40%;
+  cursor: default;
+  position: relative;
+}
+
+#listaProdotti img {
+  width: 30%;
+  border-radius: 5px;
+  margin-right: 5%;
+}
+
+#listaProdotti .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#listaProdotti h3 {
+  margin-bottom: 3px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+#listaProdotti .size {
+  font-size: 14px;
+  color: #333333b5;
+}
+
+#listaProdotti .spacer {
+  flex-grow: 1;
+}
+
+#listaProdotti .price {
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #333333b5;
+}
+
+#listaProdotti .total {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tasto {
+  display: inline-block;
+  height: 42px;
+  width: 42px;
+  margin-left: 3px;
+  border-radius: 5px;
+  background-color: #333;
+  background-image: url("./pictures/remove_from_cart.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  cursor: pointer;
+  position: absolute;
+  top: 35px;
+  right: 35px;
+}
+
+.counter {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #33333373;
+  padding: 3px;
+  border-radius: 5px;
+  cursor: default;
+  color: #333;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+}
+
+.counter .minus,
+.counter .plus {
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  width: 8px;
+  text-align: center;
+}
+
+.plus.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.counter .number {
+  margin: 2px 15px;
+  text-align: center;
+}
+
+#riepilogo div.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 20%;
+  margin-left: 20px;
+  font-size: 16.5px;
+  color: #333333b5;
+  height: 60%;
+}
+
+#riepilogo h2 {
+  height: 100%;
+  padding-top: 42px;
+}
+
+
+#riepilogo {
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  height: 13%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.87);
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  border: 1px solid #ddd;
+  padding-left: 23%;
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#checkout {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-left: 18%;
+  height: 25%;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+}
+
+#notification {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14%;
+  height: 7%;
+  background-color: #007706cf;
+  border-radius: 5px;
+  z-index: 9999;
+  box-shadow: 0px 0px 2.5px #333333c5;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+#notification.show-notification {
+  transition: opacity 0.1s ease;
+  opacity: 1;
+}
+
+footer {
+  display: block;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  width: 100vw;
+  margin-top: auto;
+}
+
+div#popup.hidden {
+  display: none;
+}
+
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+}
+
+.empty-message {
+  font-size: 30px;
+  color: #333;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  #hamburger {
+    display: flex;
+  }
+  
+  .header_cont {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menu a{
+    display: none;
+  }
+
+  #user{
+    display: none;
+  }
+
+  .header {
+    text-align: right;
+  }
+
+  #listaProdotti li {
+    margin: 10px;
+    width: 80%;
+    height: 140px;
+  }
+
+  #listaProdotti img {
+    width: 35%;
+    margin-right: 3%;
+  }
+  
+  #listaProdotti h3 {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  #listaProdotti .size {
+    font-size: 11.5px;
+  }
+  
+  #listaProdotti .price {
+    margin-bottom: 10px;
+    font-size: 11.5px;
+  }
+  
+  .tasto {
+    height: 30px;
+    width: 30px;
+    top: 15px;
+    right: 10px;
+  }
+  
+  .counter {
+    font-size: 13px;
+    padding: 2px;
+    bottom: 12px;
+    right: 10px;
+  }
+  
+  .counter .minus,
+  .counter .plus {
+    padding: 5px;
+    width: 5px;
+  }
+  
+  .counter .number {
+    margin: 2px 10px;
+  }
+  
+  #riepilogo div.left {
+    margin-left: 0px;
+    padding-left: 6px;
+    font-size: 14px;
+    height: 40%;
+    flex-grow: 1;
+  }
+  
+  #riepilogo h2 {
+    font-size: 16px;
+    padding-left: 10px;
+    padding-top: 16%;
+  }
+  
+  #riepilogo {
+    height: 12%;
+    padding-left: 0px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #checkout {
+    padding: 5px 10px;
+    font-size: 13.5px;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+
+}
